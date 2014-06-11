@@ -27,8 +27,24 @@ $(document).ready(function(){
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
-    window.dancers.push(dancer);
+
     $('body').append(dancer.$node);
+
+    for (var od=0; od < window.dancers.length; od++) {
+      var otherDancer = window.dancers[od];
+      if (dancer.distance(otherDancer) < 400) {
+       console.log("TOO DAMN CLOSE!!!");
+        $('.pirate').toggle("shake");
+        $('.katanaGuy').toggle("fade");
+        $('.redGuy').toggle("highlight");
+        $('.kungFuPanda').toggle("slide");
+      // this.$node.find('img').attr('src', this.currImg).toggle("explode");
+        // $('.pirate').toggle("explode");
+
+      }
+    }
+
+    window.dancers.push(dancer);
   });
 
   $(".lineupButton").on("click", function() {

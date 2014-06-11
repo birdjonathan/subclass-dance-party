@@ -34,6 +34,12 @@ Dancer.prototype.setPosition = function(top, left){
   this.$node.css(styleSettings);
 };
 
+Dancer.prototype.distance = function(otherDancer) {
+  var topDiff = this.top - otherDancer.top;
+  var leftDiff = this.left - otherDancer.left;
+  return Math.sqrt(Math.pow(topDiff, 2) + Math.pow(leftDiff, 2));
+};
+
 Dancer.prototype.lineup = function(top, left){
   this.setPosition(this.top, 30);
 }

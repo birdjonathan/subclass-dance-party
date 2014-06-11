@@ -1,6 +1,12 @@
 body, html{
   height:100%;
+  background: url("gifs/disco.jpeg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -0-background-size: cover;
+  background-size: cover;
 }
+
 body{
   margin: 0px;
   background-color:#444;
@@ -9,6 +15,8 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
+
+
 .title, .addDancerButton{
   padding:5px 12px;
   float:right;
@@ -35,7 +43,12 @@ body, a:link, a:visited, a:active{
 }
 .kungFuPanda{
   position:absolute;
+  background-size: 15px 15px;
 }
 .redGuy{
+  position:absolute;
+}
+
+.pirate{
   position:absolute;
 }
